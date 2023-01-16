@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             "pub = my_py_pkg.pub:main",
             "talker = my_py_pkg.talker:main"
+            "listener = my_py_pkg.sub:main" 
         ],
     },
 )

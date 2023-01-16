@@ -8,13 +8,14 @@ class Talker(Node):
         super().__init__("node_test")
         self.counter_ = 0
         # create_publisher needs 3 parameters: Msg Type, message, and buffer size
-        self.publisher = self.create_publisher(String, "Hello", 10)
+        self.publisher = self.create_publisher(String, "Hello_Justin", 10)
         self._timer = self.create_timer(0.5, self.publish_hello)
-        self.get_logger().info("publishing message")
+        self.get_logger().info("publishing message has started")
 
     def publish_hello(self):
         msg = String()
-        msg.data = "Hello World"
+        self.counter_ += 1
+        msg.data = "Hello Justin " + str(self.counter_)
         self.publisher.publish(msg)
 
 def main(args=None):
