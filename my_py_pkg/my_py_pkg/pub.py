@@ -5,7 +5,7 @@ from std_msgs.msg import String
 class Talker(Node):
 
     def __init__(self):
-        super().__init__("node_test")
+        super().__init__("pub_node_test")
         self.counter_ = 0
         # create_publisher needs 3 parameters: Msg Type, message, and buffer size
         self.publisher = self.create_publisher(String, "Hello_Justin", 10)
