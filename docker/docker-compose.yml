@@ -11,8 +11,8 @@ services:
       - "32662:32662"
       - "32663:32663"
     volumes:
-      - /home/kev/ros:/home/ros
-      - /home/kev/cubie-1:/ros2
+      - /home/jlutzwpi/ros:/home/ros
+      - /home/jlutzwpi/cubie-1:/ros2
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
     tty: true
